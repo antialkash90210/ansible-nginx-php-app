@@ -1,0 +1,8 @@
+# Добавить базовый образ PHP-FPM
+FROM php:8.2-fpm
+
+# Установите расширения
+# Чтобы подключиться к MySQL, добавьте mysqli
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+

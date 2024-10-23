@@ -1,0 +1,6 @@
+# Используйте официальный NGINX image
+FROM nginx:latest
+# Удалить конфигурацию NGINX по умолчанию
+RUN rm /etc/nginx/conf.d/default.conf
+# Скопируйте свою пользовательскую конфигурацию NGINX
+COPY ./nginx/nginx.conf /etc/nginx/conf.d/

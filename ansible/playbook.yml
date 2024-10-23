@@ -1,0 +1,11 @@
+- name: Example Simple Playbook
+  hosts: all
+  become: yes
+
+  roles:
+    - role: common
+#    - role: docker
+    - role: app
+  vars:
+    nginx_root: "/var/www/html"
+    server_name: "test.olejean.ru"

@@ -1,0 +1,9 @@
+---
+- name: Download rustup
+  ansible.builtin.get_url:
+    url: curl -fsSL https://get.docker.com -o get-docker.sh
+    dest: get-docker.sh
+
+
+- name: Выполнение Bash-скриптов
+  script: sh ./get-docker.sh # путь до Bash-скрипта на управляющей машине
